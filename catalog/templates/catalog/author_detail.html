@@ -1,0 +1,35 @@
+{% extends 'catalog/base.html'%}
+
+{%block title%}{{author.last_name}},{{author.first_name}}{%endblock%}
+
+
+{% block body %}
+
+	<h3><b>Author: </b>{{author.last_name}},{{author.first_name}}</h3>
+
+	<p>{{author.date_of_birth}}-{{author.date_of_death}}</p>
+
+
+	<div class="detail">
+
+		<h4>Books:</h4>
+		
+		{% for book in author.book_set.all%}
+
+			<p></p>
+			<a href="{%url 'catalog:book_detail' book.id %}">{{book.title}}</a> &nbsp;<b>({{book.bookinstance_set.count}})</b>
+				
+			<p>{{book.summary}}
+			<br>
+
+		{%endfor%}
+
+
+
+
+
+	</div>
+
+
+
+{% endblock%}	

@@ -1,0 +1,27 @@
+
+{% extends 'catalog/base.html'%}
+
+{%block title%}Books{%endblock%}
+
+{% block body %}
+
+
+	<h3>Book List</h3>
+
+	{%if all_books%}
+
+		{% for book in all_books%}
+
+			<ul>
+			<li><a href="{%url 'catalog:book_detail' book.id %}">{{book.title}}</a> ({{book.author}})<br></li>	
+			</ul>
+
+		{%endfor%}
+
+	{%else%}
+
+		<h4>No Books in the Library</h4>
+
+	{%endif%}
+
+{% endblock%}	

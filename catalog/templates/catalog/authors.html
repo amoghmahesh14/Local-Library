@@ -1,0 +1,21 @@
+
+{% extends 'catalog/base.html'%}
+
+{%block title%}Authors{%endblock%}
+
+
+{% block body %}
+
+
+<h3>Author List</h3>
+
+	{% for author in all_authors%}
+
+		<ul> 
+		<li><a href="{%url 'catalog:author_detail' author.id %}"> {{author.first_name}} {{author.last_name}} </a>({{author.date_of_birth}}-{{author.date_of_death}})<br></li>	
+		</ul>
+
+	{%endfor%}
+
+
+{% endblock%}	

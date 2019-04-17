@@ -1,0 +1,23 @@
+	
+
+.navbar{
+	height: 60px;
+	text-align: center;
+	
+
+}
+
+.body{
+	
+	padding: 20px;
+	font:helvetica;
+	background-color:#D3D3D3;
+}
+
+.detail{
+	margin: 10px;
+	border:solid 1px ;
+	padding: 20px;
+	background-color: #FFE4C4;
+}
+

@@ -1,0 +1,29 @@
+
+{% extends 'catalog/base.html'%}
+
+
+{%block title%}{%endblock%}
+
+
+{% block body %}
+
+
+<h3>Local Library Home</h3>  <br>
+
+<h4>Library Staus:</h4>
+The Library has the following record counts:
+<ul>
+	<li>Books:{{num_books}}</li>	
+	<li>Books Instances:{{num_instances}}</li>
+	<li>Books Instances num_instances_available:{{num_instances_available}}</li>
+	<li>Authors:{{num_authors}}</li>
+
+
+
+</ul>
+<p style="font-size:10px; color:red;">You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+
+
+	
+
+{% endblock%}	
